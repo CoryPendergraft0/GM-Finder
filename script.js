@@ -46,22 +46,19 @@ var getMovie = function (title) {
       getMovie(userInput);
 })
 
-var APIKey = "48385021c28044a383e2de4c194654e4";
-
-var game;
-
-var queryURL = "https://api.rawg.io/api/games?key=48385021c28044a383e2de4c194654e4&dates=2019-09-01,2019-09-30&platforms=18,1,7" + game;
 
 
 
-var getMovie = function (title) {
-    var apiUrl2 = '' + title + '&apikey=48385021c28044a383e2de4c194654e4';
+
+var getGame = function (gTitle) {
+    var apiGame = 'https://api.rawg.io/api/games/' + gTitle + 'key=48385021c28044a383e2de4c194654e4';
+    console.log(apiGame)
   
-    fetch(apiUrl2)
+    fetch(apiGame)
       .then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
-              //console.log(data);
+              console.log(data);
             displayTitle(data);
           });
         } else {
@@ -74,12 +71,20 @@ var getMovie = function (title) {
   };
 
   var displayGame = function(data) {
-    var gameTitle = document.querySelector('.movieResults');
-    movieTitle.textContent = data.Title
-    var gamePlatforms= document.querySelector('.actors');
-    var movGenre = document.querySelector('.genre');
-    var moviePlot = document.querySelector('.plot');
-    var movieScore = document.querySelector('.metascore');
+    var gameTitle = document.querySelector('.gameResults');
+    gameTitle.textContent = data.results.name;
+
+    var gameEsrb= document.querySelector('.esrb');
+    gameEsrb.textContent = data.results.esrb_rating;
+
+    var gameRelease = document.querySelector('.release');
+    gameRelease.textContent = data.results.released;
+
+    var gameRating = document.querySelector('.rating');
+    gameRating.textContent = data.results.rating;
+
+    var gameMeta = document.querySelector('.meta');
+    gameType.textContent = data.results.metacritic;
   }
   
   
