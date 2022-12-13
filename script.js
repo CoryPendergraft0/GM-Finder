@@ -50,16 +50,16 @@ var getMovie = function (title) {
 
 
 
-var getGame = function (gTitle) {
-    var apiGame = 'https://api.rawg.io/api/games/' + gTitle + 'key=48385021c28044a383e2de4c194654e4';
-    console.log(apiGame)
+var getGame = function (Title) {
+    var apiGame = 'https://api.rawg.io/api/games?key=48385021c28044a383e2de4c194654e4';
+    //console.log(apiGame)
   
     fetch(apiGame)
       .then(function (response) {
         if (response.ok) {
           response.json().then(function (data) {
-              console.log(data);
-            displayTitle(data);
+              //console.log(data);
+            displayGame(data);
           });
         } else {
           alert('Error: ' + response.statusText);
@@ -74,7 +74,7 @@ var getGame = function (gTitle) {
     var gameTitle = document.querySelector('.gameResults');
     gameTitle.textContent = data.results.name;
 
-    var gameEsrb= document.querySelector('.esrb');
+    var gameEsrb = document.querySelector('.esrb');
     gameEsrb.textContent = data.results.esrb_rating;
 
     var gameRelease = document.querySelector('.release');
@@ -84,7 +84,7 @@ var getGame = function (gTitle) {
     gameRating.textContent = data.results.rating;
 
     var gameMeta = document.querySelector('.meta');
-    gameType.textContent = data.results.metacritic;
+    gameMeta.textContent = data.results.metacritic;
   }
   
   
@@ -95,4 +95,5 @@ var getGame = function (gTitle) {
       var input = document.querySelector('#query');
       var userInput = input.value
       getMovie(userInput);
+      getGame(userInput);
 })
