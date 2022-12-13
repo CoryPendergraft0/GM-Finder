@@ -34,57 +34,43 @@ var getMovie = function (title) {
     
     var movieScore = document.querySelector('.metascore');
     movieScore.textContent = data.Metascore
-  }
-  
-  
-  
-  var search = document.querySelector("#searchBar"); 
-  search.addEventListener("submit", function (event){
-      event.preventDefault();
-      var input = document.querySelector('#query');
-      var userInput = input.value
-      getMovie(userInput);
-})
-
-
-
-
-
-var getGame = function (gTitle) {
-    var apiGame = 'https://api.rawg.io/api/games/' + gTitle + 'key=48385021c28044a383e2de4c194654e4';
-    console.log(apiGame)
-  
-    fetch(apiGame)
-      .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (data) {
-              console.log(data);
-            displayTitle(data);
-          });
-        } else {
-          alert('Error: ' + response.statusText);
-        }
-      })
-      .catch(function (error) {
-        alert('Unable to connect to RAWG Server');
-      });
   };
-
+  
+  var getGame = function (game) {
+    var apiGame = 'https://api.rawg.io/api/games?key=48385021c28044a383e2de4c194654e4';
+    //console.log(apiGame)
+    
+    fetch(apiGame)
+    .then(function (response) {
+      if (response.ok) {
+        response.json().then(function (data) {
+          //console.log(data);
+          displayGame(data);
+        });
+      } else {
+        alert('Error: ' + response.statusText);
+      }
+    })
+    .catch(function (error) {
+      alert('Unable to connect to RAWG Server');
+    });
+  };
+  
   var displayGame = function(data) {
     var gameTitle = document.querySelector('.gameResults');
-    gameTitle.textContent = data.results.name;
-
+    gameTitle.textContent = data.results.results[0].name;
+    
     var gameEsrb= document.querySelector('.esrb');
     gameEsrb.textContent = data.results.esrb_rating;
-
+    
     var gameRelease = document.querySelector('.release');
     gameRelease.textContent = data.results.released;
-
+    
     var gameRating = document.querySelector('.rating');
     gameRating.textContent = data.results.rating;
-
+    
     var gameMeta = document.querySelector('.meta');
-    gameType.textContent = data.results.metacritic;
+    gameMeta.textContent = data.results.metacritic;
   }
   
   
@@ -95,4 +81,12 @@ var getGame = function (gTitle) {
       var input = document.querySelector('#query');
       var userInput = input.value
       getMovie(userInput);
-})
+});
+
+  var search = document.querySelector("#searchBar"); 
+  search.addEventListener("submit", function (event){
+    event.preventDefault();
+    var input = document.querySelector('#query');
+    var userInput = input.value
+    getGame(userInput);
+  })
