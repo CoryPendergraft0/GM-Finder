@@ -1,5 +1,9 @@
 # Welcome to our App, GM-Finder!
-GM-Finder is an app that allows users to enter their favorite Movie or Video Game title into the search bar, and results from 2 APIs will populate onto the page!
+GM-Finder is an app that allows users to enter their favorite Movie or Video Game title into the search bar, and results from 2 APIs will populate onto the page! Below are the 2 APIs that we decided to use
+
+OPEN MOVIE DATABASE | https://www.omdbapi.com/
+
+RAWG VIDEO GAME API | https://rawg.io/apidocs
 
 
 [Link to our project](https://placeholder.link/)
@@ -33,7 +37,7 @@ GM-Finder is an app that allows users to enter their favorite Movie or Video Gam
 
 
 ## Description of project
-We created an app that allows users to find information about different movies and video games as well as find out if their favorite movie was turned into a video game, or vise versa.
+GM-Finder was created to align our love of film with our love
 
 
 ## Visuals
