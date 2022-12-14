@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>Welcome to GM-Finder!</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets\style.css"/>
+
+<title>Welcome to GM-Finder!</title>
 </head>
 <body class="d-flex flex-column min-100-vh ">
     <header class="p-5 text-center text-dark">
-        <h1>Movie & Game Finder</h1>
+        <h1 class="title">Movie & Game Finder</h1>
     </header>
     <form id="searchBar" class="p-1 text-center"> 
         <input type="search" id="query" name="q" placeholder="Search...">
@@ -18,9 +23,9 @@
     </form>
     <body>
     <div class="row p-4" style="height: 32rem;">
-        <div class="card col-md-5 text-white bg-secondary">
+        <div class="card col-md-5 text-dark bg-warning">
             <div class="card-block p-4">
-                <h3 class="movieResults">Movie Results</h3>
+                <h2 class="movieResults text-primary">Movie Results</h2>
                 <p class="actors">Cast</p>
                 <p class="genre">Genre of Movie</p>
                 <p class="plot">Plot of Film</p>
@@ -28,9 +33,9 @@
             </div>
         </div>
         
-        <div class="card col-md-5 offset-md-2 text-white bg-secondary">
+        <div class="card col-md-5 offset-md-2 text-white bg-dark">
             <div class="card-block p-4">
-                <h3 class="gameResults">Game Results</h3>
+                <h2 class="gameResults text-danger">Game Results</h2>
                 <p class="esrb">ESRB Rating</p>
                 <p class="release">Release Date</p>
                 <p class="gameGenre">Game Genre</p>
@@ -50,6 +55,6 @@
     </footer>
 </body>
 
-<script src="./script.js"></script>
+<script src="assets\script.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </html>
