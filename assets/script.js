@@ -1,4 +1,9 @@
 // requests and stores data from the movie API 
+
+
+
+
+
 var getMovie = function (title) {
   var apiUrl = 'http://www.omdbapi.com/?t=' + title + '&apikey=8da09333';
 
@@ -126,4 +131,5 @@ var getGame = function (game) {
       clearGame(userInput);
       getGame(userInput);
       getMovie(userInput);
+      localStorage.setItem(input, userInput);
 });
