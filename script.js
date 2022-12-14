@@ -37,7 +37,7 @@ var getMovie = function (title) {
   };
   
   var getGame = function (game) {
-    var apiGame = 'https://api.rawg.io/api/games?key=48385021c28044a383e2de4c194654e4';
+    var apiGame = 'https://api.rawg.io/api/games?' + game + 'key=48385021c28044a383e2de4c194654e4';
     //console.log(apiGame)
     
     fetch(apiGame)
