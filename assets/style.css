@@ -13,6 +13,6 @@ p {
 }
 
 body {
-	height: 960px;
+	height: 100vh;
 	background-image: linear-gradient(180deg, white, black);
 }
