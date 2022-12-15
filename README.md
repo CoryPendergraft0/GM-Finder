@@ -6,7 +6,7 @@ OPEN MOVIE DATABASE | https://www.omdbapi.com/
 RAWG VIDEO GAME API | https://rawg.io/apidocs
 
 
-[Link to our project](https://placeholder.link/)
+[Link to our project](https://corypendergraft0.github.io/GM-Finder/)
 
 ## Table of contents
 - [Project Requirements](#project-requirements)
@@ -37,8 +37,9 @@ RAWG VIDEO GAME API | https://rawg.io/apidocs
 
 
 ## Description of project
-GM-Finder was created to align our love of film with our love
+Our application searches through multiple databases to help find information about the result of your search title. You will get important information such as release date, genre, and other things you may want to know. 
 
 
 ## Visuals
-![GM-Finder App Image](placeholder.img) 
+![GM-Finder App Image](./assets/images/Finding%20Nemo%20Demo.png) 
+![Another image of a demo](./assets/images/Over%20the%20Hedge%20Demo.png) 
