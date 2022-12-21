@@ -1,6 +1,6 @@
 // requests and stores data from the movie API 
 var getMovie = function (title) {
-  var apiUrl = 'http://www.omdbapi.com/?t=' + title + '&apikey=8da09333';
+  var apiUrl = 'https://www.omdbapi.com/?t=' + title + '&apikey=8da09333';
 
   fetch(apiUrl)
     .then(function (response) {
